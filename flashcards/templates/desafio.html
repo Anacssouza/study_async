@@ -8,6 +8,7 @@
     <link href="{% static 'flashcard/css/iniciar_desafio.css' %}" rel="stylesheet">
     <link href="{% static 'flashcard/css/desafio.css' %}" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 {% endblock 'cabecalho' %}
 
@@ -74,7 +75,7 @@
                 <p class="fonte-p">Erros: {{erros}} </p>
                 <p class="fonte-p">Faltantes: {{faltantes}} </p>
                 <br>
-                <a class="btn-cadastro btn-desafio" href="">Relatório detalhado</a>
+                <a class="btn-cadastro btn-desafio" href="{% url 'relatorio' desafio.id %}">Relatório detalhado</a>
             </div>
         </div>
 
